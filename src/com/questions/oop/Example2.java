@@ -5,11 +5,11 @@ public class Example2 {
     public int field2 = 6;
     int field3 = 7;
 }
-class Example2R {
+class Example2App {
     public static void main(String[] args) {
         Example2 example = new Example2();
-        // System.out.println(example.field1);
-        // System.out.println(example.field2);
-        // System.out.println(example.field3);
+        System.out.println("example.field1");
+        System.out.println("example.field2");
+        System.out.println("example.field3");
     }
 }
