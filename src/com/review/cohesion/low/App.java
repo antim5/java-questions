@@ -1,31 +1,38 @@
 package com.review.cohesion.low;
 
+// COPY
 class Contact {
     private String name;
-    private int age;
     String mobileNum;
     private int debtAmount;
     int timesCalled;
     String email; // to be implemented
     int timesEmailed; // to be implemented
 
-    public Contact(String name, int age, String mobileNum, int debtAmount) {
+    public Contact(String name, String mobileNum, int debtAmount) {
         this.name = name;
-        this.age = age;
         this.mobileNum = mobileNum;
         this.debtAmount = debtAmount;
     }
 
-    public void makeCall(String n){
+    public void makeCall(String n) throws Exception {
         System.out.printf("Calling %s", n);
+        // external module call
+        boolean dialFailed = false;
+        if (dialFailed == true) {
+            throw new Exception("dial_failed");
+        }
     }
 }
 
 class App {
-    public static void main(String[] args)
-    {
-        Contact contact = new Contact("Marie J. Hoppe", 26, "865-749-8540", 1200);
+    public static void main(String[] args) {
+        Contact contact = new Contact("Marie J. Hoppe", "865-749-8540", 1200);
         contact.timesCalled++;
-        contact.makeCall(contact.mobileNum);
+        try {
+            contact.makeCall(contact.mobileNum);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }
