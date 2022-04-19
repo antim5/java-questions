@@ -14,7 +14,7 @@ class ElemsPairFinder {
         }
     }
 
-    public void printElemsForSum(int targetSum) {
+    public void pickElemsForSum(int targetSum) {
         for (int i = 0; i < elems.length; i++) {
             int targetElem = targetSum - elems[i];
             if (elemsMap.containsKey(targetElem)) {
@@ -32,8 +32,8 @@ public class App {
     public static void main(String[] args) {
         ElemsPairFinder finder = new ElemsPairFinder(new int[]{2, -4, 10, 19});
 
-        finder.printElemsForSum(6); // outputs: -4 (idx: 1) + 10 (idx: 2) = 6
-        finder.printElemsForSum(-2); // outputs: 2 (idx: 0) + -4 (idx: 1) = -2
-        finder.printElemsForSum(0); // outputs: none
+        finder.pickElemsForSum(6); // outputs: -4 (idx: 1) + 10 (idx: 2) = 6
+        finder.pickElemsForSum(-2); // outputs: 2 (idx: 0) + -4 (idx: 1) = -2
+        finder.pickElemsForSum(0); // outputs: none
     }
 }
