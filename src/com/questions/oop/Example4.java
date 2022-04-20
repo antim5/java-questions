@@ -1,19 +1,28 @@
 package com.questions.oop;
 
-public class Example4 {
+// this one fails
+class Example40 {
     int age = 5;
-    Example4(int age) {
+
+    Example40(int age) {
         this.age = age;
     }
+
     public static void main(String[] args) {
-        //System.out.println(new Example4().age);
+        System.out.println(
+                new Example40().age
+        );
     }
 }
 
-class Example4R {
+// this one is ok
+class Example41 {
     public int age = 5;
+
     public static void main(String[] args) {
-        System.out.println(new Example4R().age);
+        System.out.println(
+                new Example41().age
+        );
     }
 }
 
