@@ -23,7 +23,7 @@ class App {
         RectangleArea area = new RectangleArea(5, 6);
         System.out.println(area.square); // outputs: 30
 
-        area.modifySides(3,2);
+        area.modifySides(3, 2);
         System.out.println(area.square); // outputs: 6
 
         area.squareWithSidesDoubled(3, 2);

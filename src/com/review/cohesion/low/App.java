@@ -17,7 +17,7 @@ class Contact {
 
     public void makeCall(String n) throws Exception {
         System.out.printf("Calling %s", n);
-        // external module call
+        // TODO: perform external call here
         boolean dialFailed = false;
         if (dialFailed == true) {
             throw new Exception("dial_failed");
